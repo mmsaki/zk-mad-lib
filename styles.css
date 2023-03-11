@@ -24,14 +24,17 @@
   height: 500px;
   gap: 10px;
   padding: 10px;
+  grid-row: 1/4;
+}
+
+.center-text {
+  text-align: center;
 }
 .mad-lib-results {
   display: grid;
-  /* background-color: #210; */
-  height: 500px;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
+  /* background-color: #e00; */
+  height: 170px;
+  margin: 10px;
 }
 
 .box-title {
@@ -133,4 +136,23 @@
   transform: transalate(-50%, -50%);
   border-radius: 50%;
   border: 1px solid #320;
+}
+
+.zk-box {
+  display: grid;
+  height: 300px;
+  /* background: #4fd; */
+  align-content: center;
+}
+
+.zk-info {
+  display: grid;
+  background: #d9d9d9;
+  height: 250px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.fill-challenge {
+  border-bottom: 2px dotted;
 }
