@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Mad Libs</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="./public/2.png" width="50" height="50" alt="logo" />
+      <img src="./public/madlibs_logo.png" height="90" alt="logo" />
+      <!-- <h1>MAD LIBS</h1> -->
+      <img src="./public/6.png" width="50" height="50" />
+    </div>
+    <div class="eyes">
+      <div class="eye left-eye">
+        <div class="eye-ball"></div>
+      </div>
+      <div class="eye right-eye">
+        <div class="eye-ball"></div>
+      </div>
+    </div>
+    <div class="app-container">
+      <div class="mad-lib-box">
+        <div class="box-title shadow"><span>Head</span></div>
+        <div class="box-form shadow">
+          <form>
+            <section class="inputs">
+              <label for="word1" class="label">word1: </label>
+              <input id="word1" name="word1" class="input" type="text" />
+              <label for="word2" class="label">word2: </label>
+              <input id="word2" name="word2" class="input" type="text" />
+              <label for="word3" class="label">word3: </label>
+              <input id="word3" name="word3" class="input" type="text" />
+              <label for="word4" class="label">word4: </label>
+              <input id="word4" name="word4" class="input" type="text" />
+              <label for="word5" class="label">word5: </label>
+              <input id="word5" name="word5" class="input" type="text" />
+              <label for="word6" class="label">word6: </label>
+              <input id="word6" name="word6" class="input" type="text" />
+            </section>
+          </form>
+        </div>
+        <div class="button-container">
+          <button class="box-button shadow reload">reload</button>
+          <button class="box-button shadow submit">play</button>
+        </div>
+      </div>
+      <div class="mad-lib-results">
+        <div>
+          <div class="result-title shadow">result box</div>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Commodo elit at imperdiet dui accumsan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var balls = document.getElementsByClassName('eye-ball');
+      document.onmousemove = function () {
+        var x = (event.clientX * 100) / window.innerWidth + '%';
+        var y = (event.clientY * 100) / window.innerHeight + '%';
+        for (var i = 0; i < 2; i++) {
+          balls[i].style.left = x;
+          balls[i].style.top = y;
+          balls[i].style.transform = 'transalate(-"+x+", -"+y+")';
+        }
+      };
+    </script>
+  </body>
+</html>

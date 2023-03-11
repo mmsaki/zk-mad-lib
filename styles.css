@@ -1,0 +1,136 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+
+.navbar img {
+  margin-top: 20px;
+}
+
+.app-container {
+  display: grid;
+  /* background-color: #223; */
+  height: 600px;
+  grid-template-columns: 3fr 4fr;
+  align-content: center;
+  padding: 0px 20px;
+  gap: 20px;
+}
+
+.mad-lib-box {
+  display: grid;
+  /* background-color: #ee4; */
+  height: 500px;
+  gap: 10px;
+  padding: 10px;
+}
+.mad-lib-results {
+  display: grid;
+  /* background-color: #210; */
+  height: 500px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.box-title {
+  background-color: #d9d9d9;
+  height: 40px;
+  text-align: center;
+}
+
+.box-form {
+  background-color: #d9d9d9;
+  height: 317px;
+}
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.box-button {
+  height: 40px;
+  text-align: center;
+  min-width: 150px;
+}
+
+.reload {
+  background-color: #d9d9d9;
+}
+
+.submit {
+  background-color: #328efa;
+}
+
+.shadow {
+  border-radius: 2px;
+  filter: drop-shadow(8px 8px 0px #292929);
+}
+
+.input {
+  height: 30px;
+  border-radius: 3px;
+  font-size: 1.2em;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 10px;
+  padding: 15px 10px;
+  justify-content: center;
+}
+
+.result-title {
+  height: 60px;
+  width: 400px;
+  background: #56e196;
+  margin: auto 0px;
+}
+
+.eyes {
+  position: absolute;
+  top: 53px;
+  width: 100%;
+  transform: transalateY(-50%);
+  text-align: center;
+  background: red;
+}
+
+.eye {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  display: inline-block;
+  margin: 0px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  position: absolute;
+  overflow: hidden;
+}
+
+.left-eye {
+  left: 47%;
+}
+.right-eye {
+  left: 49%;
+}
+
+.eye-ball {
+  width: 5px;
+  height: 5px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: transalate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid #320;
+}
