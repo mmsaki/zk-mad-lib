@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/public/favicon/favicon.ico" />
     <title>Mad Libs</title>
   </head>
   <body>
     <div class="navbar">
       <img src="./public/2.png" width="50" height="50" alt="logo" />
       <img src="./public/madlibs_logo.png" height="90" alt="logo" />
-      <!-- <h1>MAD LIBS</h1> -->
+      <h1>MAD LIBS</h1>
       <img src="./public/6.png" width="50" height="50" />
     </div>
     <div class="eyes">
@@ -29,17 +30,53 @@
           <form>
             <section class="inputs">
               <label for="word1" class="label">word1: </label>
-              <input id="word1" name="word1" class="input" type="text" />
+              <input
+                id="word1"
+                name="word1"
+                class="input"
+                type="text"
+                oninput="getValue('word1','wordOne')"
+              />
               <label for="word2" class="label">word2: </label>
-              <input id="word2" name="word2" class="input" type="text" />
+              <input
+                id="word2"
+                name="word2"
+                class="input"
+                type="text"
+                oninput="getValue('word2','wordTwo')"
+              />
               <label for="word3" class="label">word3: </label>
-              <input id="word3" name="word3" class="input" type="text" />
+              <input
+                id="word3"
+                name="word3"
+                class="input"
+                type="text"
+                oninput="getValue('word3','wordThree')"
+              />
               <label for="word4" class="label">word4: </label>
-              <input id="word4" name="word4" class="input" type="text" />
+              <input
+                id="word4"
+                name="word4"
+                class="input"
+                type="text"
+                oninput="getValue('word4','wordFour')"
+              />
               <label for="word5" class="label">word5: </label>
-              <input id="word5" name="word5" class="input" type="text" />
+              <input
+                id="word5"
+                name="word5"
+                class="input"
+                type="text"
+                oninput="getValue('word5','wordFive')"
+              />
               <label for="word6" class="label">word6: </label>
-              <input id="word6" name="word6" class="input" type="text" />
+              <input
+                id="word6"
+                name="word6"
+                class="input"
+                type="text"
+                oninput="getValue('word6','wordSix')"
+              />
             </section>
           </form>
         </div>
@@ -53,9 +90,13 @@
           <div class="result-title shadow">result box</div>
           <div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Commodo elit at imperdiet dui accumsan.
+              Lorem ipsum <span id="wordOne">____________</span> sit amet,
+              consectetur adipiscing
+              <span id="wordTwo">____________</span> elit, sed do eiusmod tempor
+              <span id="wordThree">____________</span>incididunt ut labore et
+              <span id="wordFour">____________</span> dolore magna aliqua.
+              Commodo <span id="wordFive">____________</span> elit at imperdiet
+              dui accumsan <span id="wordSix">____________</span>.
             </p>
           </div>
         </div>
@@ -72,6 +113,14 @@
           balls[i].style.transform = 'transalate(-"+x+", -"+y+")';
         }
       };
+    </script>
+    <script>
+      function getValue(selector, target) {
+        let txt = document.getElementById(selector);
+        let txtValue = txt.value;
+        let result = document.getElementById(target);
+        result.innerText = txtValue;
+      }
     </script>
   </body>
 </html>
