@@ -1,7 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding; 0px;
+}
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  /* justify-content: space-between; */
+  grid-template-columns: 1fr 2fr 1fr;
   padding: 0px 40px;
+  max-width: 800px;
+  min-width: 500px;
+  margin: auto;
 }
 
 .navbar img {
@@ -12,10 +22,12 @@
   display: grid;
   /* background-color: #223; */
   height: 600px;
+  max-width: 1000px;
   grid-template-columns: 3fr 4fr;
   align-content: center;
-  padding: 0px 20px;
-  gap: 20px;
+  padding: 20px;
+  gap: 0px 40px;
+  margin: auto;
 }
 
 .mad-lib-box {
@@ -30,20 +42,25 @@
 .mad-lib-results {
   display: grid;
   /* background-color: #e00; */
-  height: 170px;
+  height: 300px;
   margin: 10px;
+  font-size: 1.2rem;
+  max-width: 500px;
+  min-width: 200px;
 }
 
 .zk-box {
   display: grid;
-  height: 300px;
+  height: 240px;
   /* background: #4fd; */
 }
 
 .zk-info {
   display: grid;
   background: #d9d9d9;
-  height: 250px;
+  max-width: 500px;
+  min-width: 200px;
+  height: 190px;
   margin: 10px;
   padding: 10px;
 }
@@ -110,20 +127,20 @@
 
 .form-sections {
   display: grid;
-  gap: 50px;
+  gap: 90px;
 }
 
-.result-title {
-  height: 60px;
-  width: 400px;
+.connect-button {
+  height: 55px;
+  min-width: 150px;
   background: #56e196;
   margin: auto 0px;
 }
 
 .eyes {
   position: absolute;
-  top: 53px;
-  width: 100%;
+  top: 49px;
+  width: 90vw;
   transform: transalateY(-50%);
   text-align: center;
   background: red;
