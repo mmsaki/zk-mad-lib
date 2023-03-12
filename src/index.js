@@ -9,3 +9,10 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+const connect = ReactDOM.createRoot(document.getElementById('connect'));
+connect.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

@@ -68,9 +68,14 @@ function App() {
   }
 
   return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={incrementCounter} disabled={isLoading}>
+    <div className='hello'>
+      <button
+        class='connect-button shadow'
+        onClick={incrementCounter}
+        disabled={isLoading}
+      >
+        <p>Count: {count}</p>
+        <span id='"connect'>Counter button </span>
         {isLoading ? 'loading...' : '+1'}
       </button>
     </div>

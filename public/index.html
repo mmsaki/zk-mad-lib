@@ -2,15 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <script
-      src="https://unpkg.com/react@18/umd/react.production.min.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
-      crossorigin
-    ></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../styles.css" />
@@ -22,17 +13,16 @@
     />
     <title>Mad Libs</title>
   </head>
-  <body class="root">
+  <body>
     <div class="navbar">
       <img src="2.png" width="50" height="50" alt="logo" />
       <img src="madlibs_logo.png" height="90" alt="logo" />
       <!-- <h1>MAD LIBS</h1> -->
       <!-- <img src="./public/6.png" width="50" height="50" /> -->
       <button class="connect-button shadow">
-        <!-- <img src="./public/6.png" width="50" height="50" /> -->
-
         <span>Connect Button</span>
       </button>
+      <!-- <div id="connect"></div> -->
     </div>
     <div class="eyes">
       <div class="eye left-eye">
@@ -142,6 +132,7 @@
               aliqua. Commodo <span id="wordFive">______5______</span> elit at
               imperdiet dui accumsan <span id="wordSix">_____6_______</span>.
             </p>
+            <div id="root"></div>
           </div>
         </div>
       </div>
@@ -168,7 +159,7 @@
         var y = (event.clientY * 80) / window.innerHeight + '%';
         for (var i = 0; i < 3; i++) {
           balls[i].style.left = x;
-          // balls[i].style.top = y;
+          balls[i].style.top = y;
           balls[i].style.transform = 'transalate(-"+x+", -"+y+")';
         }
       };

@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding; 0px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -111,7 +117,7 @@
 
 .form-sections {
   display: grid;
-  gap: 50px;
+  gap: 90px;
 }
 
 .connect-button {
