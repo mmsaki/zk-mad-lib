@@ -13,7 +13,12 @@
       <img src="./public/2.png" width="50" height="50" alt="logo" />
       <img src="./public/madlibs_logo.png" height="90" alt="logo" />
       <!-- <h1>MAD LIBS</h1> -->
-      <img src="./public/6.png" width="50" height="50" />
+      <!-- <img src="./public/6.png" width="50" height="50" /> -->
+      <button class="connect-button shadow">
+        <!-- <img src="./public/6.png" width="50" height="50" /> -->
+
+        <span>Connect Button</span>
+      </button>
     </div>
     <div class="eyes">
       <div class="eye left-eye">
@@ -25,9 +30,12 @@
     </div>
     <div class="app-container">
       <div class="mad-lib-box">
-        <div class="box-title shadow"><span>Head</span></div>
+        <div class="box-title shadow">
+          <span class="center-text">Create Proof</span>
+        </div>
+        <p>Rules: Puzzle only accepts characters 'a-z'</p>
         <div class="box-form shadow">
-          <form>
+          <form class="form-sections" onsubmit="alert('Submitted');">
             <section class="inputs">
               <label for="word1" class="label">word1: </label>
               <input
@@ -35,6 +43,9 @@
                 name="word1"
                 class="input"
                 type="text"
+                maxlength="16"
+                required
+                pattern="[a-z]+"
                 oninput="getValue('word1','wordOne')"
               />
               <label for="word2" class="label">word2: </label>
@@ -43,6 +54,9 @@
                 name="word2"
                 class="input"
                 type="text"
+                maxlength="16"
+                required
+                pattern="[a-z]+"
                 oninput="getValue('word2','wordTwo')"
               />
               <label for="word3" class="label">word3: </label>
@@ -51,6 +65,9 @@
                 name="word3"
                 class="input"
                 type="text"
+                maxlength="16"
+                required
+                pattern="[a-z]+"
                 oninput="getValue('word3','wordThree')"
               />
               <label for="word4" class="label">word4: </label>
@@ -59,6 +76,9 @@
                 name="word4"
                 class="input"
                 type="text"
+                maxlength="16"
+                required
+                pattern="[a-z]+"
                 oninput="getValue('word4','wordFour')"
               />
               <label for="word5" class="label">word5: </label>
@@ -67,6 +87,9 @@
                 name="word5"
                 class="input"
                 type="text"
+                maxlength="16"
+                required
+                pattern="[a-z]+"
                 oninput="getValue('word5','wordFive')"
               />
               <label for="word6" class="label">word6: </label>
@@ -75,46 +98,61 @@
                 name="word6"
                 class="input"
                 type="text"
+                maxlength="16"
+                required
+                pattern="[a-z]+"
                 oninput="getValue('word6','wordSix')"
               />
             </section>
+            <section class="buttons">
+              <div class="button-container">
+                <button class="box-button reload" type="reset">reload</button>
+                <button type="submit" class="box-button submit">play</button>
+              </div>
+            </section>
           </form>
-        </div>
-        <div class="button-container">
-          <button class="box-button shadow reload">reload</button>
-          <button class="box-button shadow submit">play</button>
         </div>
       </div>
       <div class="mad-lib-results">
         <div>
-          <div class="result-title shadow center-text">result box</div>
+          <!-- <button class="result-title shadow">
+            <span>Connect Button</span>
+          </button> -->
           <div>
-            <p>
+            <p class="challenge">
               Lorem ipsum
-              <span id="wordOne">____________</span> sit amet, consectetur
-              adipiscing <span id="wordTwo">____________</span> elit, sed do
-              eiusmod tempor <span id="wordThree">____________</span>incididunt
-              ut labore et <span id="wordFour">____________</span> dolore magna
-              aliqua. Commodo <span id="wordFive">____________</span> elit at
-              imperdiet dui accumsan <span id="wordSix">____________</span>.
+              <span id="wordOne">______1______</span> sit amet, consectetur
+              adipiscing <span id="wordTwo">______2______</span> elit, sed do
+              eiusmod tempor <span id="wordThree">______3______</span>incididunt
+              ut labore et <span id="wordFour">_____4_______</span> dolore magna
+              aliqua. Commodo <span id="wordFive">______5______</span> elit at
+              imperdiet dui accumsan <span id="wordSix">_____6_______</span>.
             </p>
           </div>
         </div>
       </div>
       <div class="zk-box">
         <div class="zk-info">
+          <span>CHALLENGE ID # : </span>
           <span>MY ACCOUNT : </span>
+          <span>Chain ID : </span>
+          <span>Smart Contract : </span>
+          <span>Generate : </span>
+          <span>Proof : </span>
+          <span>Verify Proof : </span>
+          <span>Verified Transaction: </span>
+          <span>isValid : </span>
         </div>
       </div>
     </div>
     <script>
       var balls = document.getElementsByClassName('eye-ball');
       document.onmousemove = function () {
-        var x = (event.clientX * 100) / window.innerWidth + '%';
-        var y = (event.clientY * 100) / window.innerHeight + '%';
-        for (var i = 0; i < 2; i++) {
+        var x = (event.clientX * 80) / window.innerWidth + '%';
+        var y = (event.clientY * 80) / window.innerHeight + '%';
+        for (var i = 0; i < 3; i++) {
           balls[i].style.left = x;
-          balls[i].style.top = y;
+          // balls[i].style.top = y;
           balls[i].style.transform = 'transalate(-"+x+", -"+y+")';
         }
       };

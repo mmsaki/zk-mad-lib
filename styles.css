@@ -27,14 +27,31 @@
   grid-row: 1/4;
 }
 
-.center-text {
-  text-align: center;
-}
 .mad-lib-results {
   display: grid;
   /* background-color: #e00; */
-  height: 170px;
+  height: 300px;
   margin: 10px;
+}
+
+.zk-box {
+  display: grid;
+  height: 200px;
+  /* background: #4fd; */
+}
+
+.zk-info {
+  display: grid;
+  background: #d9d9d9;
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.center-text {
+  display: grid;
+  padding: 12px;
+  font-size: 1.2rem;
 }
 
 .box-title {
@@ -91,9 +108,14 @@
   justify-content: center;
 }
 
-.result-title {
+.form-sections {
+  display: grid;
+  gap: 50px;
+}
+
+.connect-button {
   height: 60px;
-  width: 400px;
+  width: 200px;
   background: #56e196;
   margin: auto 0px;
 }
@@ -137,22 +159,10 @@
   border-radius: 50%;
   border: 1px solid #320;
 }
-
-.zk-box {
-  display: grid;
-  height: 300px;
-  /* background: #4fd; */
-  align-content: center;
-}
-
-.zk-info {
-  display: grid;
-  background: #d9d9d9;
-  height: 250px;
-  margin: 10px;
-  padding: 10px;
-}
-
 .fill-challenge {
   border-bottom: 2px dotted;
+}
+
+.challenge {
+  padding: 20px;
 }
