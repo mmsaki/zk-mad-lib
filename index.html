@@ -13,7 +13,12 @@
       <img src="./public/2.png" width="50" height="50" alt="logo" />
       <img src="./public/madlibs_logo.png" height="90" alt="logo" />
       <!-- <h1>MAD LIBS</h1> -->
-      <img src="./public/6.png" width="50" height="50" />
+      <!-- <img src="./public/6.png" width="50" height="50" /> -->
+      <button class="connect-button shadow">
+        <!-- <img src="./public/6.png" width="50" height="50" /> -->
+
+        <span>Connect Button</span>
+      </button>
     </div>
     <div class="eyes">
       <div class="eye left-eye">
@@ -28,6 +33,7 @@
         <div class="box-title shadow">
           <span class="center-text">Create Proof</span>
         </div>
+        <p>Rules: Puzzle only accepts characters 'a-z'</p>
         <div class="box-form shadow">
           <form class="form-sections" onsubmit="alert('Submitted');">
             <section class="inputs">
@@ -39,7 +45,7 @@
                 type="text"
                 maxlength="16"
                 required
-                pattern="[A-Za-z]+"
+                pattern="[a-z]+"
                 oninput="getValue('word1','wordOne')"
               />
               <label for="word2" class="label">word2: </label>
@@ -50,7 +56,7 @@
                 type="text"
                 maxlength="16"
                 required
-                pattern="[A-Za-z]+"
+                pattern="[a-z]+"
                 oninput="getValue('word2','wordTwo')"
               />
               <label for="word3" class="label">word3: </label>
@@ -61,7 +67,7 @@
                 type="text"
                 maxlength="16"
                 required
-                pattern="[A-Za-z]+"
+                pattern="[a-z]+"
                 oninput="getValue('word3','wordThree')"
               />
               <label for="word4" class="label">word4: </label>
@@ -72,7 +78,7 @@
                 type="text"
                 maxlength="16"
                 required
-                pattern="[A-Za-z]+"
+                pattern="[a-z]+"
                 oninput="getValue('word4','wordFour')"
               />
               <label for="word5" class="label">word5: </label>
@@ -83,7 +89,7 @@
                 type="text"
                 maxlength="16"
                 required
-                pattern="[A-Za-z]+"
+                pattern="[a-z]+"
                 oninput="getValue('word5','wordFive')"
               />
               <label for="word6" class="label">word6: </label>
@@ -94,20 +100,14 @@
                 type="text"
                 maxlength="16"
                 required
-                pattern="[A-Za-z]+"
+                pattern="[a-z]+"
                 oninput="getValue('word6','wordSix')"
               />
             </section>
             <section class="buttons">
               <div class="button-container">
                 <button class="box-button reload" type="reset">reload</button>
-                <button
-                  type="submit"
-                  class="box-button submit"
-                  onclick="validate()"
-                >
-                  play
-                </button>
+                <button type="submit" class="box-button submit">play</button>
               </div>
             </section>
           </form>
@@ -115,9 +115,9 @@
       </div>
       <div class="mad-lib-results">
         <div>
-          <button class="result-title shadow">
+          <!-- <button class="result-title shadow">
             <span>Connect Button</span>
-          </button>
+          </button> -->
           <div>
             <p class="challenge">
               Lorem ipsum
@@ -152,7 +152,7 @@
         var y = (event.clientY * 80) / window.innerHeight + '%';
         for (var i = 0; i < 3; i++) {
           balls[i].style.left = x;
-          balls[i].style.top = y;
+          // balls[i].style.top = y;
           balls[i].style.transform = 'transalate(-"+x+", -"+y+")';
         }
       };
@@ -163,20 +163,6 @@
         let txtValue = txt.value;
         let result = document.getElementById(target);
         result.innerText = txtValue;
-      }
-    </script>
-    <script>
-      document.logOn.onsubmit = validate;
-
-      function validate() {
-        var name = document.logOn.pw.value;
-        if (!name === '/[a-zA-Z0-9]') {
-          alert(
-            'Your answers cant Have any thing other than a-zA-Z0-9 - Play It Straight!'
-          );
-          return false;
-        }
-        return true;
       }
     </script>
   </body>

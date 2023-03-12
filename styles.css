@@ -30,20 +30,20 @@
 .mad-lib-results {
   display: grid;
   /* background-color: #e00; */
-  height: 170px;
+  height: 300px;
   margin: 10px;
 }
 
 .zk-box {
   display: grid;
-  height: 300px;
+  height: 200px;
   /* background: #4fd; */
 }
 
 .zk-info {
   display: grid;
   background: #d9d9d9;
-  height: 250px;
+  height: 150px;
   margin: 10px;
   padding: 10px;
 }
@@ -113,9 +113,9 @@
   gap: 50px;
 }
 
-.result-title {
+.connect-button {
   height: 60px;
-  width: 400px;
+  width: 200px;
   background: #56e196;
   margin: auto 0px;
 }
