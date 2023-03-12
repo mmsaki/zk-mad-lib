@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="manifest" href="manifest.json" />
+    <meta
+      name="Mad Libs Game"
+      content="Web application showing use of zero knowledge proofs using zkSNARKS in a mad libs word game"
+    />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
     <script defer src="/_vercel/insights/script.js"></script>
@@ -16,10 +23,9 @@
       <!-- <h1>MAD LIBS</h1> -->
       <!-- <img src="./public/6.png" width="50" height="50" /> -->
       <button class="connect-button shadow">
-        <!-- <img src="./public/6.png" width="50" height="50" /> -->
-
         <span>Connect Button</span>
       </button>
+      <!-- <div id="connect"></div> -->
     </div>
     <!-- <div class="eyes">
       <div class="eye left-eye">
@@ -129,6 +135,7 @@
               aliqua. Commodo <span id="wordFive">______5______</span> elit at
               imperdiet dui accumsan <span id="wordSix">_____6_______</span>.
             </p>
+            <div id="root"></div>
           </div>
         </div>
       </div>
@@ -144,6 +151,8 @@
           <span>Verified Transaction: </span>
           <span>isValid : </span>
         </div>
+        <!-- Load our React component. -->
+        <script src="like_button.js"></script>
       </div>
     </div>
     <script>
@@ -165,6 +174,10 @@
         let result = document.getElementById(target);
         result.innerText = txtValue;
       }
+    </script>
+    <!-- Load our React component. -->
+    <script src="like_button.js">
+      ReactDOM.render()
     </script>
   </body>
 </html>
